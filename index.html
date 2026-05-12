@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureVPN - 安全、快速、稳定的VPN服务</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>SecureVPN</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">功能</a></li>
+                <li><a href="#servers">服务器</a></li>
+                <li><a href="#pricing">价格</a></li>
+                <li><a href="#about">关于</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn btn-outline" id="loginBtn">登录</button>
+                <button class="btn btn-primary" id="signupBtn">注册</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>保护您的在线隐私</h1>
+            <p>全球超过50个国家的高速服务器，让您安全地浏览互联网</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">国家</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1000+</span>
+                    <span class="stat-label">服务器</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">50M+</span>
+                    <span class="stat-label">用户</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn btn-primary btn-large" id="getStartedBtn">立即开始</button>
+                <button class="btn btn-outline btn-large" id="learnMoreBtn">了解更多</button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="vpn-connection">
+                <div class="globe">
+                    <div class="globe-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="connection-lines">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                    </div>
+                </div>
+                <div class="server-card" id="mainServer">
+                    <div class="server-status online"></div>
+                    <div class="server-info">
+                        <span class="server-name">美国 - 纽约</span>
+                        <span class="server-ping">32ms</span>
+                    </div>
+                    <button class="connect-btn" id="connectBtn">
+                        <i class="fas fa-power-off"></i>
+                        <span>连接</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2>为什么选择 SecureVPN</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>军事级加密</h3>
+                <p>采用AES-256加密技术，确保您的数据安全</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3>高速连接</h3>
+                <p>全球分布式服务器，提供极速体验</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-eye-slash"></i>
+                </div>
+                <h3>零日志政策</h3>
+                <p>我们不记录您的任何浏览活动</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>全球服务器</h3>
+                <p>覆盖50+国家，随时随地连接</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>多设备支持</h3>
+                <p>同时连接最多5台设备</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headphones"></i>
+                </div>
+                <h3>24/7支持</h3>
+                <p>全天候客服支持，随时为您服务</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servers" class="servers">
+        <h2>选择服务器</h2>
+        <div class="servers-grid">
+            <div class="server-item" data-location="美国 - 纽约">
+                <div class="server-flag">🇺🇸</div>
+                <div class="server-details">
+                    <span class="location">美国 - 纽约</span>
+                    <span class="load">负载: 45%</span>
+                </div>
+                <span class="ping">32ms</span>
+            </div>
+            <div class="server-item" data-location="英国 - 伦敦">
+                <div class="server-flag">🇬🇧</div>
+                <div class="server-details">
+                    <span class="location">英国 - 伦敦</span>
+                    <span class="load">负载: 62%</span>
+                </div>
+                <span class="ping">45ms</span>
+            </div>
+            <div class="server-item" data-location="日本 - 东京">
+                <div class="server-flag">🇯🇵</div>
+                <div class="server-details">
+                    <span class="location">日本 - 东京</span>
+                    <span class="load">负载: 38%</span>
+                </div>
+                <span class="ping">58ms</span>
+            </div>
+            <div class="server-item" data-location="新加坡">
+                <div class="server-flag">🇸🇬</div>
+                <div class="server-details">
+                    <span class="location">新加坡</span>
+                    <span class="load">负载: 55%</span>
+                </div>
+                <span class="ping">42ms</span>
+            </div>
+            <div class="server-item" data-location="德国 - 法兰克福">
+                <div class="server-flag">🇩🇪</div>
+                <div class="server-details">
+                    <span class="location">德国 - 法兰克福</span>
+                    <span class="load">负载: 48%</span>
+                </div>
+                <span class="ping">52ms</span>
+            </div>
+            <div class="server-item" data-location="澳大利亚 - 悉尼">
+                <div class="server-flag">🇦🇺</div>
+                <div class="server-details">
+                    <span class="location">澳大利亚 - 悉尼</span>
+                    <span class="load">负载: 35%</span>
+                </div>
+                <span class="ping">65ms</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>选择您的方案</h2>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>基础版</h3>
+                <div class="price">
+                    <span class="currency">¥</span>
+                    <span class="amount">39</span>
+                    <span class="period">/月</span>
+                </div>
+                <ul>
+                    <li>5个服务器位置</li>
+                    <li>1台设备连接</li>
+                    <li>基础加密</li>
+                    <li>邮件支持</li>
+                </ul>
+                <button class="btn btn-outline">选择方案</button>
+            </div>
+            <div class="pricing-card popular">
+                <div class="popular-badge">最受欢迎</div>
+                <h3>高级版</h3>
+                <div class="price">
+                    <span class="currency">¥</span>
+                    <span class="amount">69</span>
+                    <span class="period">/月</span>
+                </div>
+                <ul>
+                    <li>30个服务器位置</li>
+                    <li>3台设备连接</li>
+                    <li>AES-256加密</li>
+                    <li>24/7在线支持</li>
+                    <li>零日志政策</li>
+                </ul>
+                <button class="btn btn-primary">选择方案</button>
+            </div>
+            <div class="pricing-card">
+                <h3>旗舰版</h3>
+                <div class="price">
+                    <span class="currency">¥</span>
+                    <span class="amount">99</span>
+                    <span class="period">/月</span>
+                </div>
+                <ul>
+                    <li>50+个服务器位置</li>
+                    <li>5台设备连接</li>
+                    <li>军事级加密</li>
+                    <li>专属客服</li>
+                    <li>零日志政策</li>
+                    <li>无限带宽</li>
+                </ul>
+                <button class="btn btn-outline">选择方案</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>关于我们</h2>
+        <p>SecureVPN致力于为用户提供最安全、最快速的VPN服务。我们的使命是保护每一位用户的在线隐私，让互联网真正自由开放。</p>
+        <div class="about-stats">
+            <div class="about-stat">
+                <span>10+</span>
+                <span>年行业经验</span>
+            </div>
+            <div class="about-stat">
+                <span>99.9%</span>
+                <span>服务可用性</span>
+            </div>
+            <div class="about-stat">
+                <span>24/7</span>
+                <span>技术支持</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>SecureVPN</span>
+                </div>
+                <p>保护您的在线隐私，畅享自由互联网</p>
+            </div>
+            <div class="footer-section">
+                <h4>产品</h4>
+                <ul>
+                    <li><a href="#features">功能介绍</a></li>
+                    <li><a href="#servers">服务器</a></li>
+                    <li><a href="#pricing">价格方案</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>支持</h4>
+                <ul>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>法律</h4>
+                <ul>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">服务条款</a></li>
+                    <li><a href="#">零日志声明</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SecureVPN. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>登录</h2>
+                <button class="close-btn" id="closeLoginModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">邮箱</label>
+                    <input type="email" id="loginEmail" placeholder="请输入邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">密码</label>
+                    <input type="password" id="loginPassword" placeholder="请输入密码" required>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">记住我</label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">登录</button>
+                <p class="form-link">还没有账号？<a href="#" id="switchToSignup">立即注册</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>注册</h2>
+                <button class="close-btn" id="closeSignupModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupUsername">用户名</label>
+                    <input type="text" id="signupUsername" placeholder="请输入用户名" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">邮箱</label>
+                    <input type="email" id="signupEmail" placeholder="请输入邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">密码</label>
+                    <input type="password" id="signupPassword" placeholder="请输入密码" required>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="agreeTerms" required>
+                    <label for="agreeTerms">我同意<a href="#">服务条款</a>和<a href="#">隐私政策</a></label>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">注册</button>
+                <p class="form-link">已有账号？<a href="#" id="switchToLogin">立即登录</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="connection-status" id="connectionStatus">
+        <div class="status-indicator offline"></div>
+        <span>未连接</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

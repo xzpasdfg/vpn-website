@@ -1,0 +1,8 @@
+# 忽略不必要的文件
+builtin/
+builtin_skills/
+extensions/
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
